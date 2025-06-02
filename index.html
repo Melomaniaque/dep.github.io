@@ -2,79 +2,69 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carte d'identité de Dep</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact QR</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f8f8f8;
+      background: #f4f4f4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      max-width: 400px;
+      width: 100%;
       text-align: center;
     }
-    .card {
-      max-width: 400px;
-      margin: auto;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      padding: 20px;
-    }
+
     img {
-      max-width: 100%;
-      border-radius: 10px;
+      width: 200px;
+      height: auto;
+      margin-bottom: 20px;
     }
+
     h1 {
-      margin-top: 10px;
-      font-size: 26px;
-      color: #333;
+      font-size: 1.8em;
+      margin-bottom: 10px;
     }
-    .info {
-      text-align: left;
-      margin-top: 15px;
+
+    a {
+      display: block;
+      margin: 10px 0;
+      font-size: 1.2em;
+      color: #0077cc;
+      text-decoration: none;
     }
-    .info p {
-      margin: 5px 0;
-      font-size: 16px;
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #999;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Jack_Russell_Terrier_1.jpg/640px-Jack_Russell_Terrier_1.jpg" alt="Photo de Dep le Jack Russel">
-    <h1>Nom : Dep</h1>
-    <div class="info">
-      <p>🐾 Race : Jack Russel (marron)</p>
-      <p>🎂 Âge : <span id="age"></span></p>
-      <p>📅 Date de naissance : 4 février 2012</p>
-      <p>💊 Allergies : Aucune connue</p>
-      <p>📞 Téléphone : 07 68 16 20 15</p>
-      <p>📧 Email : jordanbenavent2212@gmail.com</p>
-      <p>📍 Adresse : 111 allée des Glaïeuls, Le Pontet</p>
-      <p>👩‍⚕️ Vétérinaire : contacter une des clinique du pontet</p>
-    </div>
+    <img src="images/qr_code.png" alt="QR Code">
+    <h1>Contactez-moi</h1>
+    <a href="tel:+33123456789">📞 +33 1 23 45 67 89</a>
+    <a href="mailto:exemple@email.com">📧 exemple@email.com</a>
   </div>
 
-  <script>
-    function calculerAge(dateNaissance) {
-      const naissance = new Date(dateNaissance);
-      const aujourdHui = new Date();
-      let ans = aujourdHui.getFullYear() - naissance.getFullYear();
-      let mois = aujourdHui.getMonth() - naissance.getMonth();
-      let jours = aujourdHui.getDate() - naissance.getDate();
-
-      if (jours < 0) {
-        mois--;
-        jours += new Date(aujourdHui.getFullYear(), aujourdHui.getMonth(), 0).getDate();
-      }
-      if (mois < 0) {
-        ans--;
-        mois += 12;
-      }
-
-      return `${ans} ans, ${mois} mois, ${jours} jours`;
-    }
-
-    document.getElementById('age').textContent = calculerAge("2012-02-04");
-  </script>
+  <footer>
+    &copy; 2025 - Mon Site GitHub Pages
+  </footer>
 </body>
 </html>
