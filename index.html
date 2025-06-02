@@ -1,47 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact QR</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carte de contact</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 0;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      padding: 20px;
+      min-height: 100vh;
     }
 
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    .container {
+      background: #fff;
       padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       max-width: 400px;
       width: 100%;
       text-align: center;
     }
 
     img {
-      width: 200px;
+      max-width: 200px;
       height: auto;
       margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+      color: #222;
+    }
+
+    .intro {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 20px;
     }
 
     a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
       display: block;
       margin: 10px 0;
-      font-size: 1.2em;
-      color: #0077cc;
-      text-decoration: none;
     }
 
     a:hover {
@@ -49,22 +57,20 @@
     }
 
     footer {
-      margin-top: 20px;
       font-size: 0.9em;
-      color: #999;
+      color: #aaa;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="card">
+  <div class="container">
     <img src="images/qr_code.png" alt="QR Code">
-    <h1>Contactez-moi</h1>
-    <a href="tel:+33123456789">📞 +33 1 23 45 67 89</a>
-    <a href="mailto:exemple@email.com">📧 exemple@email.com</a>
+    <h1>Mes Coordonnées</h1>
+    <p class="intro">Scannez ce QR code pour accéder à mes coordonnées rapidement !</p>
+    <a href="tel:+33612345678">📞 Appeler : +33 6 12 34 56 78</a>
+    <a href="mailto:contact@monmail.com">📧 contact@monmail.com</a>
+    <footer>&copy; 2025 - Carte de contact</footer>
   </div>
-
-  <footer>
-    &copy; 2025 - Mon Site GitHub Pages
-  </footer>
 </body>
 </html>
